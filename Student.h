@@ -17,13 +17,13 @@ class Student {
     Student(int id,string name);
 
 
-    int getId() const;
-    string getName() const;
-    vector<int> getEnrolledCourses() const;
+    int getId();
+    string getName();
+    vector<int> getEnrolledCourses();
 
-    bool takesCourse(const Course&); //Checks if the student is enrolled in the course.
-    bool takeCourse(const Course&); //Adds a course if not enrolled and within credit limit.
-    void dropCourse(const Course&); //Removes a course from enrollment.
+    bool takesCourse(Course); //Checks if the student is enrolled in the course.
+    bool takeCourse(Course); //Adds a course if not enrolled and within credit limit.
+    void dropCourse(Course); //Removes a course from enrollment.
     void printDetails();
 
 

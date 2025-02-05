@@ -8,16 +8,16 @@ Student::Student(int id,string name) {
   this->name = name;
   this->total_credits = 0;
 }
-int Student::getId() const {
+int Student::getId() {
     return id;
 }
-string Student::getName() const {
+string Student::getName(){
     return name;
 }
-vector<int> Student::getEnrolledCourses() const {
+vector<int> Student::getEnrolledCourses(){
     return enrolledCourses;
 }
-bool Student::takeCourse(const Course& course) {
+bool Student::takeCourse(Course course) {
     if(takesCourse(course)) {
         return false;
     }
@@ -30,7 +30,7 @@ bool Student::takeCourse(const Course& course) {
         return false;
     }
 }
-bool Student::takesCourse(const Course& course) {
+bool Student::takesCourse(Course course) {
 for (int i = 0; i < enrolledCourses.size(); i++) {
   if (enrolledCourses[i] == course.getId()) {
     return true;
@@ -38,11 +38,11 @@ for (int i = 0; i < enrolledCourses.size(); i++) {
 }
 return false;
 }
-void Student::dropCourse(const Course& course) {
+void Student::dropCourse(Course course) {
     enrolledCourses.erase(remove(enrolledCourses.begin(),enrolledCourses.end(),course.getId()),enrolledCourses.end());
 }
 void Student::printDetails() {
-cout<<"Student ID: "<<getId()<<", "<<"Name: "<<getName()<<endl;
+cout<<"Student ID: "<<id<<", "<<"Name: "<<name<<endl;
 cout<<"Enrolled Courses: ";
 for (int i = 0; i < enrolledCourses.size(); i++) {
   cout<<enrolledCourses[i]<<" ";

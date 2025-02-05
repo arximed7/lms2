@@ -6,10 +6,10 @@ class Student;
 LMS::LMS(string name) {
     this->name = name;
 }
-void LMS::addStudent(const Student& student) {
+void LMS::addStudent(Student student) {
     this->students.push_back(student);
 }
-void LMS::addCourse(const Course& course) {
+void LMS::addCourse(Course course) {
     this->courses.push_back(course);
 }
 void LMS::addStudentToCourse(int student_id,int course_id) {

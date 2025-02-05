@@ -15,15 +15,15 @@ class Course {
     public:
     Course(int id,string name,int credits);
 
-    int getId() const;
+    int getId();
 
-    string getName() const;
+    string getName();
 
-    int getCredits() const;
+    int getCredits();
 
-    bool hasStudent(const Student&); //Check if a student is already enrolled. Return true if found.
-    bool addStudent(const Student&);//Add a student to the students list. Return true if the student was successfully added.
-    void dropStudent(const Student&); //Remove a student from the students list.
+    bool hasStudent(Student); //Check if a student is already enrolled. Return true if found.
+    bool addStudent(Student);//Add a student to the students list. Return true if the student was successfully added.
+    void dropStudent(Student); //Remove a student from the students list.
     void printDetails();
 
 };

@@ -14,8 +14,8 @@ class LMS {
     vector<Course> courses;
     public:
     LMS (string name);
-    void addStudent(const Student&);
-    void addCourse(const Course&);
+    void addStudent(Student);
+    void addCourse(Course);
     void addStudentToCourse(int student_id,int course_id);
     void printDetails();
 

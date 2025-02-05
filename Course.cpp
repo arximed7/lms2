@@ -8,16 +8,16 @@ Course::Course(int id,string name,int credits) {
     this->name = name;
     this->credits = credits;
 }
-int Course::getId() const{
+int Course::getId(){
     return id;
 }
-string Course::getName() const {
+string Course::getName(){
     return name;
 }
-int Course::getCredits() const {
+int Course::getCredits(){
     return credits;
 }
-bool Course::hasStudent(const Student& student) {
+bool Course::hasStudent(Student student) {
     for (int i : students) {
         if (i == student.getId()) {
             return true;
@@ -26,18 +26,18 @@ bool Course::hasStudent(const Student& student) {
     return false;
 }
 
-bool Course::addStudent(const Student& student) {
+bool Course::addStudent(Student student) {
 if(!hasStudent(student)){
   students.push_back(student.getId());
   return true;
 }
 return false;
 }
-void Course::dropStudent(const Student& student) {
+void Course::dropStudent(Student student) {
     students.erase(remove(students.begin(),students.end(),student.getId()),students.end());
 }
 void Course::printDetails() {
-    cout<<"Course ID: "<<getId()<<", "<<"Name: "<<getName()<<", "<<"Credits: "<<getCredits()<<endl;
+    cout<<"Course ID: "<<id<<", "<<"Name: "<<name<<", "<<"Credits: "<<credits<<endl;
     cout<<"Enrolled Students: ";
     for (int i = 0; i < students.size(); i++) {
         cout<<students[i]<<" ";
