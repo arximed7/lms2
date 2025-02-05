@@ -1,11 +1,11 @@
 #include "Course.h"
 #include<iostream>
-#include <utility>
+
 using namespace std;
 
 Course::Course(int id,string name,int credits) {
     this->id = id;
-    this->name = std::move(name);
+    this->name = name;
     this->credits = credits;
 }
 int Course::getId() const{
