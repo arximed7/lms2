@@ -36,6 +36,5 @@ void LMS::printDetails() {
   for(auto course : this->courses) {
     course.printDetails();
   }
-  cout<<endl;
 
 }

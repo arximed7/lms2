@@ -42,7 +42,7 @@ void Course::printDetails() {
     for (int i = 0; i < students.size(); i++) {
         cout<<students[i]<<" ";
     }
-    cout<<endl;
+
 
 }
 
